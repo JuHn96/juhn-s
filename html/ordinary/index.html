@@ -19,17 +19,11 @@
 <!-- modernizr js -->
 <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 <!-- 외부폰트 - Pretendard(본문) + Gmarket Sans(제목) -->
-
-
-<!-- Font Awesome 6 (아이콘용) -->
-
-<!-- Pretendard (본문용) -->
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet"/>
-<!-- Gmarket Sans (제목/버튼용) -->
 <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet"/>
 <!-- Font Awesome 6 (아이콘용) -->
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet">
-</link></head>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+</head>
 <body>
 <div class="em40_header_area_main">
 <!-- <div class="ordinary-header-top"> -->
@@ -58,9 +52,8 @@
 </div>
 </div>
 </div>
-
-<div class="ordinary-main-menu one_page hidden-xs hidden-sm witr_h_h10">
-<div class="ordinary_nav_area scroll_fixed postfix">
+<div class="ordinary-main-menu hidden-xs hidden-sm witr_h_h10">
+<div class="ordinary_nav_area scroll_fixed postfix one_page">
 <div class="container">
 <div class="row logo-left">
 <div class="col-md-3 col-sm-3 col-xs-4">
@@ -76,18 +69,18 @@
 <!-- MAIN MENU -->
 <div class="col-md-9 col-sm-9 col-xs-8 tx_menu_together">
 <nav class="ordinary_menu">
-<ul class="sub-menu">
+<ul class="sub-menu nav_scroll">
+<!-- 메인페이지 -->
 <li class="menu-item-has-children">
-<a href="index.html">메인페이지</a>
+<a href="#home">메인페이지</a>
 <ul class="sub-menu">
 <li><a href="about.html">404오류 페이지</a></li>
-<!-- <li><a href="landing_page.html">Landing Home</a></li> -->
-<li><a href="video_page.html">아직 미정-기존 - Home Video</a></li>
+<li><a href="video_page.html">Home Video</a></li>
 </ul>
 </li>
-<!-- <li><a href="about.html">About</a></li> -->
+<!-- Service -->
 <li class="menu-item-has-children">
-<a href="#">Service</a>
+<a href="#service">Service</a>
 <ul class="sub-menu">
 <li><a href="service.html">Service</a></li>
 <li><a href="it_service.html">IT Service</a></li>
@@ -96,13 +89,14 @@
 <li><a href="business_solution.html">Business Solution</a></li>
 </ul>
 </li>
+<!-- Pages -->
 <li class="menu-item-has-children">
-<a href="#">Pages</a>
+<a href="#about">Pages</a>
 <ul class="sub-menu">
 <li><a href="testimonial.html">Testimonial</a></li>
 <li><a href="pricing.html">Pricing</a></li>
 <li class="menu-item-has-children">
-<a href="#">Portfolio</a>
+<a href="javascript:void(0)">Portfolio</a>
 <ul class="sub-menu">
 <li><a href="portfolio_grid.html">Portfolio Grid</a></li>
 <li><a href="portfolio_3column.html">Portfolio 3Column</a></li>
@@ -115,14 +109,16 @@
 <li><a href="why_choose.html">Why Choose Us</a></li>
 </ul>
 </li>
+<!-- Blog -->
 <li class="menu-item-has-children">
-<a href="#">Blog</a>
+<a href="blog.html">Blog</a>
 <ul class="sub-menu">
-<li><a href="blog.html">Blog Gird</a></li>
+<li><a href="blog.html">Blog Grid</a></li>
 <li><a href="blog_left_sidebar.html">Blog Left Sidebar</a></li>
 <li><a href="blog_right_sidebar.html">Blog Right Sidebar</a></li>
 </ul>
 </li>
+<!-- Contact -->
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
@@ -134,7 +130,6 @@
 </div>
 </div>
 </div>
-
 <!-- mobile menu -->
 <div class="mobile_logo_area">
 <div class="container">
@@ -170,7 +165,7 @@
 </li>
 <li><a href="about.html">About</a></li>
 <li class="menu-item-has-children">
-<a href="#">Service</a>
+<a href="javascript:void(0)">Service</a>
 <ul class="sub-menu">
 <li><a href="service.html">Service</a></li>
 <li><a href="it_service.html">IT Service</a></li>
@@ -180,12 +175,12 @@
 </ul>
 </li>
 <li class="menu-item-has-children">
-<a href="#">Pages</a>
+<a href="javascript:void(0)">Pages</a>
 <ul class="sub-menu">
 <li><a href="testimonial.html">Testimonial</a></li>
 <li><a href="pricing.html">Pricing</a></li>
 <li class="menu-item-has-children">
-<a href="#">Portfolio</a>
+<a href="javascript:void(0)">Portfolio</a>
 <ul class="sub-menu">
 <li><a href="portfolio_grid.html">Portfolio Grid</a></li>
 <li><a href="portfolio_3column.html">Portfolio 3Column</a></li>
@@ -199,7 +194,7 @@
 </ul>
 </li>
 <li class="menu-item-has-children">
-<a href="#">Blog</a>
+<a href="blog.html">Blog</a>
 <ul class="sub-menu">
 <li><a href="blog.html">Blog Gird</a></li>
 <li><a href="blog_left_sidebar.html">Blog Left Sidebar</a></li>
@@ -224,7 +219,7 @@
 </div>
 <!-- End Mobile Menu -->
 <!-- slider -->
-<div class="witr_swiper_area">
+<div class="witr_swiper_area" id="home">
 <div class="swiper swiper_active">
 <div class="swiper-wrapper">
 <!-- 1 single swiper -->
@@ -278,7 +273,7 @@
 </div>
 </div>
 <!-- feature area -->
-<div class="od_fe_area">
+<div class="od_fe_area" id="service">
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
@@ -335,7 +330,7 @@
 </div>
 </div>
 <!-- skill area -->
-<div class="od_skil_area">
+<div class="od_skil_area" id="about">
 <div class="container">
 <div class="row">
 <div class="col-lg-6 col-md-6">
@@ -1502,5 +1497,5 @@
 <script src="assets/js/jquery.meanmenu.js"></script>
 <script src="assets/js/ajax-mail.js"></script>
 <script src="assets/js/theme.js"></script>
-</body>
+<section id="contact">Contact Section Placeholder</section><section class="blog_area blog_area" id="blog" style="min-height:300px; padding:60px 0;">Blog Section Placeholder<h2>Blog Section</h2><p>여기에 블로그 콘텐츠가 들어갑니다.</p></section></body>
 </html>

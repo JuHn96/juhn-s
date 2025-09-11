@@ -4,6 +4,7 @@
   /*==== One Page Nav  ====*/
   var top_offset = $(".one_page").height() + 0;
   $(".one_page .ordinary_menu .nav_scroll").onePageNav({
+            filter: ":not([href='#'])",
     currentClass: "current",
     changeHash: false,
     scrollSpeed: 1000,
@@ -16,7 +17,7 @@
   $(".nav_scroll > li:first-child").addClass("current");
 
   /*==== sticky nav 1  ====*/
-  $(".one_page").scrollToFixed({
+  $(".ordinary_nav_area.scroll_fixed").scrollToFixed({
     preFixed: function () {
       $(this).find(".scroll_fixed").addClass("prefix");
     },
@@ -414,3 +415,7 @@ $.scrollUp({
     time: 3000,
   });
 })(jQuery);
+
+
+// Guard: prevent '#' anchors from breaking scripts
+$(document).on('click', "a[href='#']", function(e){ e.preventDefault(); });

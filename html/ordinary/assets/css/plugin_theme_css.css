@@ -10387,33 +10387,21 @@ button,
   pointer-events: none;
 }
 .swiper-button-next:after,
-.swiper-button-prev:after {
-  font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
-  letter-spacing: 0;
-  text-transform: none;
-  font-variant: initial;
-  line-height: 1;
-}
+.swiper-button-prev:after{content:"";}
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   left: 10px;
   right: auto;
 }
 .swiper-button-prev:after,
-.swiper-container-rtl .swiper-button-next:after {
-  content: "prev";
-}
+.swiper-container-rtl .swiper-button-next:after{content:"";}
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   right: 10px;
   left: auto;
 }
 .swiper-button-next:after,
-.swiper-container-rtl .swiper-button-prev:after {
-  content: "next";
-}
+.swiper-container-rtl .swiper-button-prev:after{content:"";}
 .swiper-button-next.swiper-button-white,
 .swiper-button-prev.swiper-button-white {
   --swiper-navigation-color: #ffffff;
@@ -11015,6 +11003,78 @@ button, .btn, .dtbtn, .witr_btn, .slider_btn a {
 }
 /* Swiper 기본 버튼 글자 숨기기 */
 .swiper-button-next::after,
-.swiper-button-prev::after {
-  content: none !important;
+.swiper-button-prev:after{content:"";}
+
+/* === Added for sticky nav restore === */
+
+/* sticky nav base */
+.ordinary_nav_area.scroll_fixed {
+  background: transparent;
+  transition: all 0.3s ease;
 }
+.ordinary_nav_area.scroll_fixed .main_sticky_l { display: none; }
+.ordinary_nav_area.scroll_fixed .main_sticky_main_l { display: inline-block; }
+
+/* sticky nav after fixed */
+.ordinary_nav_area.scroll_fixed.postfix {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_l { display: inline-block; }
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_main_l { display: none; }
+
+
+/* === Swiper arrows: use Font Awesome 6 === */
+.swiper-button-prev:before,
+.swiper-button-next:before{
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+}
+.swiper-button-prev:before{ content: "\f053"; } /* chevron-left */
+.swiper-button-next:before{ content: "\f054"; } /* chevron-right */
+
+
+/* === Sticky Nav background + logo toggle === */
+.ordinary_nav_area.scroll_fixed {
+  transition: background 0.3s ease;
+}
+.ordinary_nav_area.scroll_fixed .main_sticky_l { display: none; }
+.ordinary_nav_area.scroll_fixed.postfix {
+  background: #fff; /* adjust to desired color */
+}
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_main_l { display: none; }
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_l { display: block; }
+
+
+/* === Explicit logo toggle rules === */
+.ordinary_nav_area.scroll_fixed .main_sticky_main_l { display:block; }
+.ordinary_nav_area.scroll_fixed .main_sticky_l { display:none; }
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_main_l { display:none; }
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_l { display:block; }
+
+
+/* === Sticky Nav original background + logo toggle === */
+.ordinary_nav_area.scroll_fixed { background: transparent; transition: background .3s ease; }
+.ordinary_nav_area.scroll_fixed .main_sticky_main_l { display:block; }
+.ordinary_nav_area.scroll_fixed .main_sticky_l { display:none; }
+.ordinary_nav_area.scroll_fixed.postfix { background:#fff; }
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_main_l { display:none; }
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_l { display:block; }
+
+/* Sticky Nav 배경 & 로고 전환 */
+.ordinary_nav_area.scroll_fixed {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.ordinary_nav_area.scroll_fixed .main_sticky_main_l { display: block; }
+.ordinary_nav_area.scroll_fixed .main_sticky_l { display: none; }
+
+.ordinary_nav_area.scroll_fixed.postfix {
+  background: #fff;
+}
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_main_l { display: none; }
+.ordinary_nav_area.scroll_fixed.postfix .main_sticky_l { display: block; }
