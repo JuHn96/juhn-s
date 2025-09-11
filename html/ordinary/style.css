@@ -53,13 +53,7 @@ a:hover {
     text-decoration: none;
     color: #41abff;
 }
-body {
-    font-family: Poppins,sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #333;
-}
+body { font-family: 'Pretendard', sans-serif; }
  p {
      font-style: normal;
 }
@@ -4122,4 +4116,10 @@ button:focus {
 }
  .tx_btn_global_color:hover{
      background:#000;
+}
+
+/* 제목, 버튼 폰트 지정 */
+h1, h2, h3, h4, h5, h6,
+button, .btn, .witr_btn, .dtbtn {
+    font-family: 'GmarketSans', sans-serif;
 }

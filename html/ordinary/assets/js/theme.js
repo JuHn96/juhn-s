@@ -86,13 +86,13 @@
   /*==== WOW active js   ====*/
   new WOW().init();
 
-  /*==== scrollUp  ====*/
-  $.scrollUp({
+/*==== scrollUp  ====*/
+$.scrollUp({
     scrollText: '<i class="fa-solid fa-arrow-up"></i>',
-    easingType: "linear",
+    easingType: 'linear',
     scrollSpeed: 900,
-    animation: "fade",
-  });
+    animation: 'fade'
+});
 
   /*==== Venubox  ====*/
   $(".venobox").venobox({
